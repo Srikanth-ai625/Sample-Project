@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Java Constructor Objects</h1>
+        <p id="demo"></p>
+
+        <script>
+            function Person(firstName,lastName,age){
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.fullName = function(){
+                    return this.firstName + " " + this.lastName
+                };
+            }
+        const myFather = new Person("sriki","sandy",25);
+
+        myFather.nationality ="Telugu";
+
+            document.getElementById("demo").innerHTML= myFather.fullName();
+        </script>
+    </body>
+</html>
+
