@@ -8,7 +8,7 @@
       background-color: #7a9bd7;
       text-align: left;
       padding: 100px;
-      margin-left:80px;
+      margin-left:30px;
     }
 
     h1 {
@@ -25,6 +25,11 @@
       border-radius: 10px; 
       font-size: 16px;         
     }
+      .store-badge {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
 
       #button1 {
           position: absolute;
@@ -45,18 +50,13 @@
 <body>
 <img src="https://www.doctutorials.com/wp-content/uploads/2025/02/NEET-PG-2.png" style="max-height: 475px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); max-width: 100%;">
 
-  <img src="https://longbowtechnologies.com/img/logo.jpg" alt="Logo" style="position:absolute; top:10px; left:20px; width:120px; height:70px;">
-
   <img src="https://www.doctutorials.com/wp-content/uploads/2024/04/Doc-logo.webp" alt="Logo" style="position:absolute; top:10px; right:20px; width:120px; height:70px;">
     <div>
-        <h1>Welcome to Doctutorials Website</h1>
+        <h1>Welcome to the Doctutorials Website</h1>
         <p id="message">Click the button to enter the doctutorials website</p>
         <button onclick="showMessage()">Click Me</button>
     </div>    
     <div>
-        <h1>Welcome to Longbow Website</h1>
-        <p id="message">Click the button to enter the Longbow website</p>
-        <button onclick="showMessageData()">Click Me</button>
         <br>
         <br>
         <br>
@@ -65,31 +65,36 @@
         <br>
         <button id="button1" onclick="myButton()"><b>Click Here For Helpdesk</b></button></button>
     </div> 
-    <div>
-      <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" rel="noopener">
+    <div onclick="appleStore()" style="display: flex; align-items: center; gap: 20px; padding: 20px;">
+  <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" rel="noopener">
     <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
          alt="Download on the App Store" 
-         style="height: 40px; padding:20px">
+         class="store-badge">
   </a>
-
+  </div>
+    <div onclick="playStore()" style="display: flex; align-items: center; gap: 20px; padding: 20px;">
   <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME" target="_blank" rel="noopener">
     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
          alt="Get it on Google Play" 
-         style="height: 60px; padding-right:100px">
+         class="store-badge">
   </a>
-    </div>
-      
+</div>
+
   <script>
     function showMessage() {
       document.getElementById("message").innerHTML = "Hello! You clicked the button!";
       window.open("https://www.doctutorials.com", "_blank");
     }
-    function showMessageData() {
-      document.getElementById("message").innerHTML = "Hello! You clicked the button!";
-      window.open("https://longbowtechnologies.com", "_blank");
-    }
     function myButton() {
       alert("Thanks For using These Websites!! we will connect to you very soon..");
+    }
+    function playStore() {
+      document.getElementById("message").innerHTML = "Hello! You clicked the button!";
+      window.open("https://play.google.com/store/apps/details?id=in.dgist.doctutorials&hl=en_US", "_blank");
+    }
+    function appleStore() {
+      document.getElementById("message").innerHTML = "Hello! You clicked the button!";
+      window.open("https://apps.apple.com/in/app/doctutorials-neet-pg-ss-fmge/id1475350376", "_blank");
     }
   </script>
 
