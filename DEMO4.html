@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+             justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: rgb(239, 241, 241);
+            background-color: #7a9bd7;
+
+        }
+        .welcome-section {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #7b9fd3;
+        color: white;
+        }
+
+        .info-blocks {
+        display: flex;
+        justify-content: space-around;
+        
+        padding: 30px 20px;
+        background-color: #f0f4f8;
+        }
+
+        .block {
+        background: #7b9fd3;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        width: 300px;
+        margin: 20px;
+        padding: 20px;
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        text-align: center;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        }
+
+        .block:hover {
+        transform: translateY(-10px);
+        }
+
+    </style>
+    <body>
+        <div class="welcome-section">
+            <img src="https://www.doctutorials.com/wp-content/uploads/2024/04/Doc-logo.webp" alt="Logo" style="position:static; top:10px; right:20px; width:200px; height:150px;">
+            <h1>Welcome To The Doctutorials Website</h1>
+            <p>Platform For Learning Courses</p>
+</div>
+<div class="info-blocks">
+  <div class="block">
+    <h3 id="message"  onclick="myCourse()">Courses</h3>
+    <p>Explore a wide range of medical courses curated by experts.</p>
+  </div>
+  <div class="block">
+    <h3>Faculty</h3>
+    <p>Learn from experienced and renowned educators in every field.</p>
+  </div>
+  <div class="block">
+    <h3>Test Series</h3>
+    <p>Practice with the most result-oriented Qbank and mock tests.</p>
+  </div>
+</div>
+
+<script>
+    function myCourse(){
+        document.getElementById("message").innerHTML = "Hello! You clicked the button!";
+    }
+</script>
+    </body>
+</html>
