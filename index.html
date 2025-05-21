@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Website</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+  <nav>
+    <a href="aboutUs.html">About Us</a>
+    <a href="Faculty.html">Faculty</a>
+    <a href="Plans.html">Plans</a>
+  </nav>
+  
+<div class="slider-container">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <h1>The Most Effective & Result-Oriented <br>Qbank</h1>
+        <h3>Experience the Qbank that enhances your exam preparation.</h3>
+        <b>
+        <ul>
+          <li>India’s only faculty created, curated, and verified Qbank</li>
+          <li>28,000+ MCQs, IBQs, PYQs & high-probability questions</li>
+          <li>Aligned with video lectures</li>
+        </ul>
+        </b>
+      </div>
+      <div class="slide">
+        <h1>Boost Your FMGE Exam Preparation <br>with DocTutorials</h1>
+        <h3>Experience the Qbank that enhances your exam preparation.</h3>
+        <b>
+        <ul>
+          <li>India’s only faculty created, curated, and verified Qbank</li>
+          <li>28,000+ MCQs, IBQs, PYQs & high-probability questions</li>
+          <li>Aligned with video lectures</li>
+        </ul>
+        </b>
+      </div>
+      <div class="slide">
+        <h1>Master Your University MBBS Theory <br>and Practical Exams</h1>
+        <h3>Experience the Qbank that enhances your exam preparation.</h3>
+        <b>
+        <ul>
+          <li>India’s only faculty created, curated, and verified Qbank</li>
+          <li>28,000+ MCQs, IBQs, PYQs & high-probability questions</li>
+          <li>Aligned with video lectures</li>
+        </ul>
+        </b>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+  </div>
+
+  <img src="https://www.doctutorials.com/wp-content/uploads/2025/02/NEET-PG-2.png" style="max-height: 400px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); max-width: 50%;">
+  <img src="https://www.doctutorials.com/wp-content/uploads/2024/04/Doc-logo.webp" alt="Logo" style="position:absolute; top:10px; right:20px; width:100px; height:50px;">
+
+  <div>
+    <h1>Welcome to the Doctutorials Website</h1>
+    <p id="message" style="color: aliceblue;">Click the button to enter the doctutorials website</p>
+    <a href="DEMO4.html"><button>Click Me</button></a>
+  </div>
+
+  <div>
+    <br><br><br><br><br><br>
+    <button id="button1" onclick="myButton()"><b>Click Here For Helpdesk</b></button>
+  </div> 
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px;">
+  <a href="https://apps.apple.com/in/app/doctutorials-neet-pg-ss-fmge/id1475350376" target="_blank" rel="noopener">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+         alt="Download on the App Store"
+         style="width: 120px; height: 60px; object-fit: contain; border-radius: 12px;">
+  </a>
+  <a href="https://play.google.com/store/apps/details?id=in.dgist.doctutorials&hl=en_US" target="_blank" rel="noopener">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+         alt="Get it on Google Play"
+         style="width: 180px; height: 60px; object-fit: contain; border-radius: 12px;">
+  </a>
+</div>
+  <script>
+
+    function myButton() {
+      alert("Thanks For using These Websites!! we will connect to you very soon..");
+    }
+
+    function playStore() {
+      document.getElementById("message").innerHTML = "Hello! You clicked the button!";
+      window.open("https://play.google.com/store/apps/details?id=in.dgist.doctutorials&hl=en_US", "_blank");
+    }
+
+    function appleStore() {
+      document.getElementById("message").innerHTML = "Hello! You clicked the button!";
+      window.open("https://apps.apple.com/in/app/doctutorials-neet-pg-ss-fmge/id1475350376", "_blank");
+    }
+
+    let currentSlide = 0;
+    const slides = document.getElementById("slides");
+    const dots = document.querySelectorAll(".dot");
+
+    function goToSlide(n) {
+      currentSlide = n;
+      updateSlide();
+    }
+
+    function updateSlide() {
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[currentSlide].classList.add("active");
+    }
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % dots.length;
+      updateSlide();
+    }, 4000);
+
+    updateSlide(); // Initialize
+  </script>
+
+</body>
+</html>
