@@ -1,109 +1,117 @@
-body {
-      font-family: Arial, sans-serif;
-      background-color: #7a9bd7;
-      text-align: left;
-      padding: 100px;
-      margin-left:30px;
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
-
-    h1 {
-      color: white;
+    body {
+      background: #f0f4f8;
+      color: #333;
     }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: white; 
-      color: rgb(81, 107, 201); 
-      border: none; 
-      border-radius: 10px; 
-      font-size: 16px;         
+    nav {
+      background-color: #e9edf1;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 30px;
     }
-      .store-badge {
-  width: 150px;
-  height: auto;
-  object-fit: contain;
-}
-
-      #button1 {
-          position: absolute;
-          bottom: 20px;
-          right: 20px;
-          padding: 10px 20px;
-          font-size: 16px;
-          cursor: pointer;
-          background-color: white;
-          color: rgb(81, 107, 201);
-          border: none;
-          border-radius: 10px;
-}
-nav {
-      background-color: #e9ebf0;
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px 0;
-    }
-nav a {
-      float: left;
-      display: block;
-      color: rgb(81, 107, 201);
-      text-align: center;
-      padding: 14px 16px;
+    nav a {
+      color: #5f93e8;
       text-decoration: none;
-      font-weight: bold;
-    }
-nav a:hover {
-      background-color: #c2c9d5;
-    }
-
-.slider-container {
-      position: relative;
-      max-width: 100%;
-      margin: 5px 20px 5px 0;
-      overflow: hidden;
       font-weight: 600;
-      text-align: left;
-      left: 0;
+      transition: 0.3s;
     }
-
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      background-color: #5f93e8;
+      color: white;
+      padding: 60px 20px;
+    }
     .slides {
       display: flex;
-      width: 200%;
+      width: 300%;
       transition: transform 0.5s ease-in-out;
-      color: aliceblue;
-      font-size: large;
     }
-
     .slide {
       width: 100%;
+      padding: 20px;
       flex-shrink: 0;
     }
-
-    .slide img {
-      width: 20%;
-      max-height: 400px;
-      display: block;
+    .slide h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
-
+    .slide h3 {
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    .slide ul {
+      margin-left: 20px;
+    }
     .dots {
-      text-align: left;
+      text-align: center;
       margin-top: 20px;
     }
-
     .dot {
-      height: 15px;
-      width: 15px;
-      margin: 0 5px;
+      height: 12px;
+      width: 12px;
+      margin: 0 4px;
       background-color: #bbb;
       border-radius: 50%;
       display: inline-block;
       cursor: pointer;
     }
-
     .dot.active {
-      background-color: #717171;
+      background-color: #fff;
+    }
+    .phone-img {
+      max-height: 350px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      max-width: 50%;
+    }
+    .logo {
+      position: absolute;
+      top: 5px;
+      right: 30px;
+      width: 60px;
+    }
+    .centered-content {
+      text-align: center;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .centered-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .centered-content p {
+      margin-bottom: 20px;
+    }
+    .centered-content button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #5f93e8;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+   .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+    .store-buttons img {
+      height: 60px;
     }
